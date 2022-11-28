@@ -1,57 +1,20 @@
 <template>
-  <section class="projetos">
+  <div class="projetos">
     <h1 class="title">Projetos</h1>
-
-    <RouterLink to="/projetos/novo" class="button">
-      <span class="icon is-small">
-        <i class="fas fa-plus"></i>
-      </span>
-      <span>Novo projeto</span>
-    </RouterLink>
-
-    <table class="table is-fullwidth">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="projeto in projetos" :key="projeto.id">
-          <td>{{ projeto.id }}</td>
-          <td>{{ projeto.nome }}</td>
-          <td>
-            <RouterLink :to="`/projetos/${projeto.id}`" class="button">
-              <span class="icon is-small">
-                <i class="fas fa-pencil-alt"></i>
-              </span>
-            </RouterLink>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <RouterView />
+  </div>
 </template>
 
 <script lang="ts">
-  import { computed, defineComponent } from 'vue';
-  import { useStore } from '@/store';
+  import { defineComponent } from 'vue';
 
   export default defineComponent({
-    name: 'Projetos',
-    setup () {
-      const store = useStore()
-
-      return {
-        projetos: computed(() => store.state.projetos)
-      }
-    },
+    name: 'Projetos'
   })
 </script>
 
 <style scoped>
-  .projetos {
-    padding: 3rem;
-  }
-</style>
+    .projetos {
+      padding: 3rem;
+    }
+  </style>
