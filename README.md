@@ -25,4 +25,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Project published
 
-https://alura-tracker-0.vercel.app/
+https://tracker0.vercel.app/
