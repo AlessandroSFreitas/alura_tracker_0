@@ -20,6 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Building with CSS framework
+
+https://bulma.io/
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
